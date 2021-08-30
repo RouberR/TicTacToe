@@ -51,7 +51,7 @@ public class GameLogick {
         //Горизонт!
         for(int r = 0; r < 3; r++){
             if (gameBoard[r][0] == gameBoard[r][1] && gameBoard[r][0] == gameBoard[r][2] &&
-            gameBoard[r][0] != 0){
+                    gameBoard[r][0] != 0){
                 typeWin = new int[] {r, 0, 1};
                 isWinner = true;
             }
@@ -64,44 +64,44 @@ public class GameLogick {
                 isWinner = true;
             }
         }
-       // Наискосок негатив :)
-            if (gameBoard[0][0] == gameBoard[1][1] && gameBoard[0][0] == gameBoard[2][2] &&
-                    gameBoard[0][0] != 0){
-                typeWin = new int[] {0, 2, 3};
-                isWinner = true;
-            }
+        // Наискосок негатив :)
+        if (gameBoard[0][0] == gameBoard[1][1] && gameBoard[0][0] == gameBoard[2][2] &&
+                gameBoard[0][0] != 0){
+            typeWin = new int[] {0, 2, 3};
+            isWinner = true;
+        }
         // Наискосок позитив ^^
-            if (gameBoard[2][0] == gameBoard[1][1] && gameBoard[2][0] == gameBoard[0][2] &&
-                    gameBoard[2][0] != 0){
-                typeWin = new int[] {2, 2, 4};
-                isWinner = true;
-            }
+        if (gameBoard[2][0] == gameBoard[1][1] && gameBoard[2][0] == gameBoard[0][2] &&
+                gameBoard[2][0] != 0){
+            typeWin = new int[] {2, 2, 4};
+            isWinner = true;
+        }
 
-            int boardFilled = 0;
+        int boardFilled = 0;
 
-            for(int r=0;r<3;r++){
-                for(int d=0; d<3; d++){
-                    if(gameBoard[r][d] != 0){
-                        boardFilled+=1;
-                    }
+        for(int r=0;r<3;r++){
+            for(int d=0; d<3; d++){
+                if(gameBoard[r][d] != 0){
+                    boardFilled+=1;
                 }
             }
-
-            if (isWinner){
-                playAgainButton.setVisibility(View.VISIBLE);
-                homeBTN.setVisibility(View.VISIBLE);
-                playerTurn.setText((playerNames[player-1] + "- Победитель!!"));
-                return true;
-            } else if (boardFilled == 9){
-                playAgainButton.setVisibility(View.VISIBLE);
-                homeBTN.setVisibility(View.VISIBLE);
-                playerTurn.setText("Ничья!");
-                return true;
-            }
-            else{
-                return false;
-            }
         }
+
+        if (isWinner){
+            playAgainButton.setVisibility(View.VISIBLE);
+            homeBTN.setVisibility(View.VISIBLE);
+            playerTurn.setText((playerNames[player-1] + "- Победитель!!"));
+            return true;
+        } else if (boardFilled == 9){
+            playAgainButton.setVisibility(View.VISIBLE);
+            homeBTN.setVisibility(View.VISIBLE);
+            playerTurn.setText("Ничья!");
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
 
 
