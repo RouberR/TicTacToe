@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="homeText">Крестики-нолики</string>
+    <string name="playButton">ИГРАТЬ</string>
+
+
+    <string name="player_setup_text">Введите ваше имя</string>
+    <string name="player1">Игрок-1</string>
+    <string name="player2">Игрок-2</string>
+    <string name="playButtonName">Начать</string>
+    <string name="NameInfoText">Введите ваше имя</string>
+
+    <string name="playAgainButton">Сыграть еще раз</string>
+    <string name="homeButton">Меню</string>
+    
+</resources>
