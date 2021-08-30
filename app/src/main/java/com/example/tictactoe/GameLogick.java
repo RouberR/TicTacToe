@@ -48,7 +48,7 @@ public class GameLogick {
     public boolean winnerCheck(){
         boolean isWinner = false;
 
-        //Горизонт!
+        //Горизонт!!!!!!
         for(int r = 0; r < 3; r++){
             if (gameBoard[r][0] == gameBoard[r][1] && gameBoard[r][0] == gameBoard[r][2] &&
                     gameBoard[r][0] != 0){
